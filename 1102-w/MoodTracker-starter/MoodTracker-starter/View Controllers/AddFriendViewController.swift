@@ -9,7 +9,9 @@
 import UIKit
 
 class AddFriendViewController: UIViewController {
-  
+    // 1: add property type FriendsTableViewController to the AddFriendViewController
+    var friendsVCReference: FriendsTableViewController?
+    
   // MARK: View Controller Lifecycle
   
   override func viewDidLoad() {

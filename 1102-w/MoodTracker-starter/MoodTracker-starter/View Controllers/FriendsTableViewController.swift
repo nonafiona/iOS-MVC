@@ -64,4 +64,10 @@ class FriendsTableViewController: UITableViewController {
         tableView.reloadData()
         
     }
+    
+    // 2: add a new method in FriendsTableViewController that Friend that is passed in gets added to the friends array and the tableView gets updated afterwards
+    
+    func addNewFriend(friend: Friend!) {
+        
+    }
 }
