@@ -65,9 +65,15 @@ class FriendsTableViewController: UITableViewController {
         
     }
     
-    // 2: add a new method in FriendsTableViewController that Friend that is passed in gets added to the friends array and the tableView gets updated afterwards
+    func addFriend(friend: Friend) {
+        friendArray.append(friend)
+        tableView.reloadData()
+        
+    }
     
-    func addNewFriend(friend: Friend!) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination = segue.destination as! AddFriendViewController
+        destination.friendsTableViewController = self
         
     }
 }

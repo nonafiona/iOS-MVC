@@ -14,15 +14,11 @@ class FriendTableViewCell: UITableViewCell {
     var currentFriend: Friend?
     var friendsTableViewController: FriendsTableViewController?
     
-    // TO-Do: reconnect all the IBOutlets
-    
-    
     @IBOutlet weak var nameLabel: UILabel!
     
     @IBOutlet weak var moodDescriptionLabel: UILabel!
     
     @IBOutlet weak var moodButton: UIButton!
-    
     
     @IBAction func moodButtonPressed(_ sender: Any) {
         // accesses the current friend's mood from the specific cell

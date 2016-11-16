@@ -9,32 +9,48 @@
 import UIKit
 
 class AddFriendViewController: UIViewController {
-    // 1: add property type FriendsTableViewController to the AddFriendViewController
-    var friendsVCReference: FriendsTableViewController?
     
-  // MARK: View Controller Lifecycle
-  
-  override func viewDidLoad() {
-    super.viewDidLoad()
-  }
-  
-  
-  // MARK: Actions
-  
-  @IBAction func saveButtonPressed(_ sender: AnyObject) {
-    // TODO: save the added friend here
-    dismissViewController()
-  }
-  
-  @IBAction func cancelButtonPressed(_ sender: AnyObject) {
-    dismissViewController()
-  }
-  
-  
-  // MARK: Helpers
-  
-  func dismissViewController() {
-    presentingViewController?.dismiss(animated: true)
-  }
-  
+    var friendsTableViewController : FriendsTableViewController!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var moodSegmentedControl: UISegmentedControl!
+    
+    // MARK: Actions
+    
+    @IBAction func saveButtonPressed(_ sender: AnyObject) {
+        // TO DO: Debug this after completing all other steps
+        
+        let mood : Mood
+        
+        if moodSegmentedControl.selectedSegmentIndex == 0 {
+            mood = .happy
+        } else if moodSegmentedControl.selectedSegmentIndex == 1 {
+            mood = .medium
+        } else if moodSegmentedControl.selectedSegmentIndex == 2 {
+            mood = .angry
+        }
+        
+        var friend = Friend(name: nameTextField.text!, mood: mood)
+        dismissViewController()
+        print("save button tapped")
+        
+    }
+    
+    @IBAction func cancelButtonPressed(_ sender: AnyObject) {
+        dismissViewController()
+        print("cancel button tapped")
+    }
+    
+    // MARK: Helpers
+    
+    func dismissViewController() {
+        presentingViewController?.dismiss(animated: true)
+    }
+    
+    
+    
 }
