@@ -27,7 +27,7 @@ let product = Product()
 let countCharacters = CountCharacters()
 let random = Random()
 
-//let arrayOfComputables = [sum, product, countCharacters, random]
+let arrayOfComputables = [sum, product, countCharacters, random] as [Any]
 
 /*:
  **Tasks**: 

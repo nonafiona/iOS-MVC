@@ -3,26 +3,44 @@
 import UIKit
 
 protocol CanMakeNoise {
-  func makeNoise()
+    var name : String {get}
+    var noise : String {get}
+    mutating func mammal()
 }
 
-class Human {
-  
+class Human: CanMakeNoise {
+    let name = "jack"
+    let noise = "wowza"
+    func mammal() {
+        print("\(name) says \(noise)")
+    }
 }
 
-class Pig {
-  
+class Pig: CanMakeNoise {
+    let name = "pig"
+    let noise = "oinkers"
+    func mammal() {
+        print("\(name) says \(noise)")
+    }
 }
 
-class Cow {
-  
+class Cow: CanMakeNoise {
+    let name = "cow"
+    let noise = "mOOOOO"
+    func mammal() {
+        print("\(name) says \(noise)")
+    }
 }
 
 let human = Human()
 let pig = Pig()
 let cow = Cow()
 
-// let arrayOfNoiseMaker: [CanMakeNoise] = [human, pig, cow]
+print(human.mammal())
+print(pig.mammal())
+print(cow.mammal())
+
+let noiseMaker: [CanMakeNoise] = [human, pig, cow]
 
 /*:
  **Tasks**:
