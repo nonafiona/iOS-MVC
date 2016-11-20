@@ -6,16 +6,37 @@ protocol Computable {
     func compute() -> Int
 }
 
-class Sum {
+
+class Sum: Computable {
   var numbers = [1,2,3,4,5,6,7,8,9]
+    
+    func compute() -> Int {
+        var sum = 0
+        for number in numbers {
+            sum = sum + number
+        }
+        return sum
+    }
 }
 
-class Product {
+class Product : Computable{
   var numbers = [1,2,3,4,5,6,7,8,9]
+    
+    func compute() -> Int {
+        var product = 0
+        for number in numbers {
+            product = product * number
+        }
+        return product
+    }
 }
 
-class CountCharacters {
+class CountCharacters: Computable {
   var string: String = "odinfeoivneflndwcnervbunlinwe;dqwmid"
+    func compute() -> Int {
+        var stringCount = string.characters.count
+    }
+    return stringCount
 }
 
 class Random {
@@ -27,7 +48,7 @@ let product = Product()
 let countCharacters = CountCharacters()
 let random = Random()
 
-let arrayOfComputables = [sum, product, countCharacters, random] as [Any]
+let arrayOfComputables = [sum, product, countCharacters, random]
 
 /*:
  **Tasks**: 
