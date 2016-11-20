@@ -34,9 +34,12 @@ class Product : Computable{
 class CountCharacters: Computable {
   var string: String = "odinfeoivneflndwcnervbunlinwe;dqwmid"
     func compute() -> Int {
-        var stringCount = string.characters.count
+        var stringCount = 0
+        if stringCount == 0 {
+            var stringCount = string.characters.count
+        }
+        return stringCount
     }
-    return stringCount
 }
 
 class Random {
@@ -48,7 +51,7 @@ let product = Product()
 let countCharacters = CountCharacters()
 let random = Random()
 
-let arrayOfComputables = [sum, product, countCharacters, random]
+// let arrayOfComputables = [sum, product, countCharacters, random]
 
 /*:
  **Tasks**: 
