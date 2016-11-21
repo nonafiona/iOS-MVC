@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MoodTableViewController: UITableViewController {
+class MoodTableViewController: UITableViewController, AddFriendDelegate {
 
   var friends: [Friend] = []
   
@@ -32,7 +32,9 @@ class MoodTableViewController: UITableViewController {
     return cell
   }
   
-  
+    
+   
+    
   // MARK: Public methods
   
   func updateFriend(friend: Friend) {
@@ -51,6 +53,7 @@ class MoodTableViewController: UITableViewController {
 
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     let addFriendViewController = segue.destination as! AddFriendViewController
+    addFriendViewController.delegate = self
     addFriendViewController.moodTableViewController = self  // make sure AddFriendViewController can talk to MoodTableViewController
   }
   

@@ -8,8 +8,16 @@
 
 import UIKit
 
+// AddFriendDelegate Protocol
+protocol AddFriendDelegate {
+    func addFriend(friend: Friend)
+}
+
 
 class AddFriendViewController: UIViewController {
+    
+    // create delegate property
+    var delegate : AddFriendDelegate?
   
   @IBOutlet weak var nameTextField: UITextField!
   @IBOutlet weak var moodSegmentedControl: UISegmentedControl!
@@ -24,7 +32,7 @@ class AddFriendViewController: UIViewController {
   
   @IBAction func saveButtonPressed(_ sender: AnyObject) {
     let friend = createFriendFromUI() // create friend based on UI elements
-    moodTableViewController.addFriend(friend: friend) // send friend to MoodTableViewController
+    delegate?.addFriend(friend: friend) // send friend to MoodTableViewController
     presentingViewController?.dismiss(animated: true)
   }
   
