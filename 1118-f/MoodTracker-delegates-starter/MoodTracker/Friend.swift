@@ -9,9 +9,9 @@
 import Foundation
 
 enum Mood: String {
-  case angry = "😡"
-  case medium = "😑"
-  case happy = "😁"
+  case angry = "👺"
+  case medium = "😐"
+  case happy = "💩"
 }
 
 class Friend {
