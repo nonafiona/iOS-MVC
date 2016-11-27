@@ -34,16 +34,16 @@ class Calculator {
  In practice, this looks as follows:
  */
 
-let calculator = Calculator() // create a new calculator
+//let calculator = Calculator() // create a new calculator
 
 // (1.) send a message to the calculator and make it print what operations it supports
-calculator.printCapabilities()
+//calculator.printCapabilities()
 
 // (2.) send a message to the calculator and make it add numbers 1 and 2; store the calculator's response in a new variable
-let additionResult = calculator.add(a: 1, b: 2)
+//let additionResult = calculator.add(a: 1, b: 2)
 
 // (3.) send a message to the calculator and make it subtract numbers 2 and 1; store the calculator's response in a new variable
-let subtractionResult = calculator.subtract(a: 2, b: 1)
+//let subtractionResult = calculator.subtract(a: 2, b: 1)
 
 /*:
  **Note**:
@@ -59,3 +59,26 @@ let subtractionResult = calculator.subtract(a: 2, b: 1)
  2. Create an object of type `Person`. Let it say its name by sending an appropriate message to it.
  3. Create another object of type `Person`. Make it so that both objects _say hello_ to each other by sending appropriate messages.
  */
+
+class Simpson {
+    var simpson1 = "Lisa"
+    var simpson2 = "Bart"
+    func greeting(payload: Simpson) {
+        print("Hey \(simpson1) , it's time for S U N D A Y S C H O O L")
+        }
+    func response(payload: Simpson) {
+        print("No \(simpson2), have you even heard of C O O L K I D S  1996?")
+    }
+}
+
+let lisa = Simpson()
+let bart = Simpson()
+
+bart.greeting(payload: lisa)
+lisa.response(payload: bart)
+
+
+
+
+
+
