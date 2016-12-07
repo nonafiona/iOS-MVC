@@ -23,33 +23,33 @@ PlaygroundPage.current.liveView = canvas // make the canvas appear in the assist
 /*:
  #### 1st implementation
  */
-// configure blue
-let margin = 20
-let blueX = margin
-let blueY = margin
-let blueWidth = canvas.frame.size.width * 0.5
-let blueHeight = Int(canvas.frame.size.height) - margin - margin
-let blueFrame = CGRect(x: blueX, y: blueY, width: Int(blueWidth), height: blueHeight)
-
-let blueView = UIView(frame: blueFrame)
-blueView.backgroundColor = .blue
-canvas.addSubview(blueView)
-
-// configure green
-let greenWidth = blueView.frame.size.width * 0.5
-let greenHeight = greenWidth
-let greenX = canvas.frame.size.width - greenWidth
-
-let greenFrame = CGRect(x: Int(greenX), y: 0, width: Int(greenWidth), height: Int(greenHeight))
-let greenView = UIView(frame: greenFrame)
-greenView.backgroundColor = .green
-canvas.addSubview(greenView)
-
-greenView.center.y = blueView.center.y
+//// configure blue
+//let margin = 20
+//let blueX = margin
+//let blueY = margin
+//let blueWidth = canvas.frame.size.width * 0.5
+//let blueHeight = Int(canvas.frame.size.height) - margin - margin
+//let blueFrame = CGRect(x: blueX, y: blueY, width: Int(blueWidth), height: blueHeight)
+//
+//let blueView = UIView(frame: blueFrame)
+//blueView.backgroundColor = .blue
+//canvas.addSubview(blueView)
+//
+//// configure green
+//let greenWidth = blueView.frame.size.width * 0.5
+//let greenHeight = greenWidth
+//let greenX = canvas.frame.size.width - greenWidth
+//
+//let greenFrame = CGRect(x: Int(greenX), y: 0, width: Int(greenWidth), height: Int(greenHeight))
+//let greenView = UIView(frame: greenFrame)
+//greenView.backgroundColor = .green
+//canvas.addSubview(greenView)
+//
+//greenView.center.y = blueView.center.y
 /*:
 #### 2nd implementation
 */
-// configure blue
+//configure blue
 //let blueView = UIView(frame: CGRect.zero)
 //blueView.translatesAutoresizingMaskIntoConstraints = false
 //blueView.backgroundColor = .blue
@@ -72,5 +72,5 @@ greenView.center.y = blueView.center.y
 //NSLayoutConstraint(item: greenView, attribute: .width, relatedBy: .equal, toItem: blueView, attribute: .width, multiplier: 0.5, constant: 0).isActive = true
 //NSLayoutConstraint(item: greenView, attribute: .height, relatedBy: .equal, toItem: blueView, attribute: .width, multiplier: 0.5, constant: 0).isActive = true
 //NSLayoutConstraint(item: greenView, attribute: .centerY, relatedBy: .equal, toItem: blueView, attribute: .centerY, multiplier: 1, constant: 0).isActive = true
-
-
+//
+//

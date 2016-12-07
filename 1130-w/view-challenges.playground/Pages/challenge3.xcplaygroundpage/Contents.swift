@@ -4,7 +4,13 @@ import PlaygroundSupport
 let canvasFrame = CGRect(x: 0, y :0, width: 300, height: 100)
 let canvas = UIView(frame: canvasFrame)
 canvas.backgroundColor = .white
-PlaygroundPage.current.liveView = canvas // make the canvas appear in the assistant editor
+//PlaygroundPage.current.liveView = canvas // make the canvas appear in the assistant editor
+
+
+//let betterFrame = CGRect(x: 0, y: 300, width: 300, height: 100)
+//let betterCanvas = UIView(frame: betterFrame)
+//betterCanvas.backgroundColor = .white
+//PlaygroundPage.current.liveView = betterCanvas // make the canvas appear in the assistant editor
 
 let colors: [UIColor] = [.green, .blue, .red]
 
@@ -18,4 +24,40 @@ let colors: [UIColor] = [.green, .blue, .red]
  
  (Make sure to comment out the first implementation once you start working on the second one to avoid confusion.)
  */
+// get it to work minimally and then create a function that does the same thing, quicker and better
+
+// function optimization of this:
+
+let blockColor = colors
+let block = UIView(frame: CGRect(x: 0, y: 0, width: Int(canvasFrame.width * 0.3333), height: Int(canvasFrame.height)))
+var block.backgroundColor = colors[index]
+
+//// blockSize
+//let blockSize = 100
+//print(blockSize)
+//
+//// blockPos - x val
+//let greenPos = 0
+//let bluePos = 100
+//let redPos = 200
+//
+//// blockPos - y val
+//let yCoord = 0
+//
+//// setting the subviews
+//// greenBlock
+//let greenBlock = UIView(frame: CGRect(x: greenPos, y: yCoord, width: Int(canvasFrame.width * 0.3333), height: Int(canvasFrame.height)))
+//greenBlock.backgroundColor = colors[0]
+//canvas.addSubview(greenBlock)
+//
+//// blueBlock
+//let blueBock = UIView(frame: CGRect(x: bluePos, y: yCoord, width: Int(canvasFrame.width * 0.3333), height: Int(canvasFrame.height)))
+//blueBock.backgroundColor = colors[1]
+//canvas.addSubview(blueBock)
+//
+//// redBlock
+//let redBlock = UIView(frame: CGRect(x: redPos, y: yCoord, width: Int(canvasFrame.width * 0.3333), height: Int(canvasFrame.height)))
+//redBlock.backgroundColor = colors[2]
+//canvas.addSubview(redBlock)
+
 

@@ -18,3 +18,27 @@ PlaygroundPage.current.liveView = canvas // make the canvas appear in the assist
  
  (Make sure to comment out the first implementation once you start working on the second one to avoid confusion.)
  */
+// sub challenge 1 : normal 
+
+// generalized width and height
+let redWidth = 100
+let redHeight = 100
+
+// coordinate points
+let top = 0
+let mid = 100
+let bottom = 200
+
+
+let redTop = UIView(frame: CGRect(x:top, y:top, width: redWidth, height: redHeight))
+redTop.backgroundColor = .red
+canvas.addSubview(redTop)
+
+let redMid = UIView(frame: CGRect(x:mid, y:mid, width: redWidth, height: redHeight))
+redMid.backgroundColor = .red
+canvas.addSubview(redMid)
+
+let redBottom = UIView(frame: CGRect(x: bottom, y: bottom, width: redWidth, height: redHeight))
+redBottom.backgroundColor = .red
+canvas.addSubview(redBottom)
+

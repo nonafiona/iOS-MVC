@@ -16,3 +16,23 @@ PlaygroundPage.current.liveView = canvas // make the canvas appear in the assist
  
  (Make sure to comment out the first implementation once you start working on the second one to avoid confusion.)
  */
+// sub challenge 1 : regularly
+
+let redX = 50
+let redY = 50
+let redWidth = 100
+let redHeight = 100
+
+let redView = UIView(frame: CGRect(x: redX, y: redY, width: redWidth, height: redHeight))
+redView.backgroundColor = .red
+
+canvas.addSubview(redView)
+
+// sub challenge 2 : autolayout constraints
+
+
+
+
+
+
+
