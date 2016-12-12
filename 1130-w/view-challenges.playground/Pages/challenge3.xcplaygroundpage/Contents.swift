@@ -28,11 +28,12 @@ let colors: [UIColor] = [.green, .blue, .red]
 
 // function optimization of this:
 
-let blockColor = colors
-let block = UIView(frame: CGRect(x: 0, y: 0, width: Int(canvasFrame.width * 0.3333), height: Int(canvasFrame.height)))
-var block.backgroundColor = colors[index]
+//let blockColor = colors
+//let block = UIView(frame: CGRect(x: 0, y: 0, width: Int(canvasFrame.width * 0.3333), height: Int(canvasFrame.height)))
+//var block.backgroundColor = colors[index]
 
-//// blockSize
+
+// blockSize
 //let blockSize = 100
 //print(blockSize)
 //
@@ -59,5 +60,5 @@ var block.backgroundColor = colors[index]
 //let redBlock = UIView(frame: CGRect(x: redPos, y: yCoord, width: Int(canvasFrame.width * 0.3333), height: Int(canvasFrame.height)))
 //redBlock.backgroundColor = colors[2]
 //canvas.addSubview(redBlock)
-
-
+//
+//
